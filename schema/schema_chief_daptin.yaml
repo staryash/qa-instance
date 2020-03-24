@@ -1,0 +1,91 @@
+Tables:
+  - TableName: clips
+    Columns:
+      - ColumnName: ground_truth
+        ColumnType: label
+        DataType: varchar(500)
+        Name: ground_truth
+      - ColumnName: clip_path
+        ColumnType: label
+        DataType: varchar(250)
+        Name: clip_path
+        IsUnique: true
+      - ColumnName: clip_url
+        Name: clip_url
+        ColumnType: url
+        DataType: varchar(250)
+      - ColumnName: google_prediction
+        Name: google_prediction
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
+      - ColumnName: last_fetched
+        Name: last_fetched
+        ColumnType: datetime
+        DataType: timestamp
+        DefaultValue: "'2019-01-01 01:01:01'"
+      - ColumnName: predicted_arr
+        Name: predicted_arr
+        ColumnType: label
+        DataType: varchar(100)
+        IsNullable: true
+  - TableName: prediction_model
+    Columns:
+      - ColumnName: model_name
+        Name: model_name
+        DataType: varchar(100)
+        ColumnType: label
+      - ColumnName: endpoint
+        Name: endpoint
+        ColumnType: url
+        DataType: varchar(250)
+      - ColumnName: owner
+        Name: owner
+        DataType: varchar(100)
+        ColumnType: label
+        IsNullable: true
+  - TableName: prediction
+    Columns:
+      - ColumnName: prediction_model
+        Name: prediction_model
+        DataType: varchar(100)
+        ColumnType: label
+      - ColumnName: prediction_text
+        Name: prediction_text
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
+      - ColumnName: ground_truth
+        ColumnType: label
+        DataType: varchar(500)
+        Name: ground_truth
+      - ColumnName: error_label
+        ColumnType: label
+        DataType: varchar(200)
+        Name: error_label
+      - ColumnName: marked_by
+        ColumnType: label
+        DataType: varchar(200)
+        Name: marked_by
+        IsNullable: true
+      - ColumnName: last_fetched
+        Name: last_fetched
+        ColumnType: datetime
+        DataType: timestamp
+        DefaultValue: "'2019-01-01 01:01:01'"
+      - ColumnName: is_marked
+        Name: is_marked
+        ColumnType: truefalse
+        DataType: int(1)
+        DefaultValue: '0'
+Relations:
+  - Subject: clips
+    Relation: has_many
+    Object: prediction
+  - Subject: prediction
+    Relation: has_one
+    Object: prediction_model
+Imports:
+  - FilePath: /opt/daptin/initial_data.json
+    Entity: site
+    FileType: json

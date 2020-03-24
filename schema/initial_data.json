@@ -1,0 +1,70 @@
+{
+  "world": [
+    {
+      "table_name": "clips",
+      "permission": 606115,
+      "default_permission": 606083
+    },
+    {
+      "table_name": "prediction_model",
+      "permission": 606115,
+      "default_permission": 606083
+    },
+    {
+      "table_name": "prediction",
+      "permission": 606115,
+      "default_permission": 606083
+    }
+  ],
+  "clips": [
+    {
+      "clip_url":
+        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
+      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
+      "groundTruth": "all magic flies before me",
+      "google_prediction": "all magic fly before me",
+      "modelPrediction": "all tragic fly before me"
+    },
+    {
+      "clip_url":
+        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
+      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
+      "groundTruth": "They who live by the wand shall die by my blade.",
+      "google_prediction": "They who live by the pond shall die by my blade.",
+      "modelPrediction": "They who give by the pond shall die blade."
+    },
+    {
+      "clip_url":
+        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
+      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
+      "groundTruth": "your magic ends here",
+      "google_prediction": "your magic ends here",
+      "modelPrediction": "your magic ends here"
+    },
+    {
+      "clip_url":
+        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
+      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
+      "groundTruth": "what you do with your life is your own thing",
+      "google_prediction": "what you do with your life is your own thing",
+      "modelPrediction": "what you do with your wife is your own thing"
+    },
+    {
+      "clip_url":
+        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
+      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
+      "groundTruth": "all magic flies before me",
+      "google_prediction": "all magic fly before me",
+      "modelPrediction": "all tragic fly before me"
+    }
+  ],
+  "prediction_model": [
+    {
+      "model_name": "sample model",
+      "endpoint": "https://wwww.google.com",
+      "owner": "Hari"
+    }
+  ],
+  "prediction": []
+  
+}

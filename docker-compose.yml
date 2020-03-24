@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "9999:5000"
+  production-postgres:
+    image: postgres
+    volumes:
+    - ./db:/var/lib/postgresql/data
+    environment:
+    - DEBUG=false
+    - POSTGRES_USER=qauser
+    - POSTGRES_PASSWORD=qauserpassword
+    - POSTGRES_DB=qa-daptin
