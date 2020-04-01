@@ -14,54 +14,78 @@
       "table_name": "prediction",
       "permission": 606115,
       "default_permission": 606083
+    },
+    {
+      "table_name": "error_cat",
+      "permission": 606115,
+      "default_permission": 606083
+    }
+  ],
+  "error_cat": [
+    {
+      "error_label": "word mistake",
+      "description": "some kind of word mistake"
+    },
+    {
+      "error_label": "No mistake",
+      "description": "predicted text matches ground truth"
     }
   ],
   "clips": [
     {
       "clip_url":
-        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
-      "clip_path": "57/Vo_antimage_anti_spawn_02.mp3",
-      "ground_truth": "all magic flies before me",
-      "google_prediction": "all magic fly before me",
-      "model_prediction": "all tragic fly before me"
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200305075356_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200305075356_10.5.62.90.wav",
+      "ground_truth": "balance mein se recharge kaise karen",
+      "google_prediction": "balance mein se recharge kaise karen",
+      "model_prediction": "balance kaise karein"
     },
     {
       "clip_url":
-        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
-      "clip_path": "57/Vo_antimage_anti_spawn_03.mp3",
-      "ground_truth": "They who live by the wand shall die by my blade.",
-      "google_prediction": "They who live by the pond shall die by my blade.",
-      "model_prediction": "They who give by the pond shall die blade."
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205140244_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200205140244_10.5.62.90.wav",
+      "ground_truth": "Mujhe Mera data balance batao",
+      "google_prediction": "Mujhe Mera data balance batao",
+      "model_prediction": "mera balance batao"
     },
     {
       "clip_url":
-        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
-      "clip_path": "57/Vo_antimage_anti_spawn_04.mp3",
-      "ground_truth": "your magic ends here",
-      "google_prediction": "your magic ends here",
-      "model_prediction": "your magic ends here"
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200206060540_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200206060540_10.5.62.90.wav",
+      "ground_truth": "Mujhe network mein problem a rahi hai",
+      "google_prediction": "Mujhe network mein problem a rahi hai"
+
     },
     {
       "clip_url":
-        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
-      "clip_path": "57/Vo_antimage_anti_spawn_05.mp3",
-      "ground_truth": "what you do with your life is your own thing",
-      "google_prediction": "what you do with your life is your own thing",
-      "model_prediction": "what you do with your wife is your own thing"
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205111120_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200205111120_10.5.62.90.wav",
+      "ground_truth": "roaming packs Patna",
+      "google_prediction": "roaming packs Patna"
+
     },
     {
       "clip_url":
-        "https://gamepedia.cursecdn.com/dota2_gamepedia/5/57/Vo_antimage_anti_spawn_02.mp3",
-      "clip_path": "57/Vo_antimage_anti_spawn_06.mp3",
-      "ground_truth": "all magic flies before me",
-      "google_prediction": "all magic fly before me",
-      "model_prediction": "all tragic fly before me"
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200214103854_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200214103854_10.5.62.90.wav",
+      "ground_truth": "which is the highest pool in India",
+      "google_prediction": "which is the highest pool in India"
+
+    },
+    {
+      "clip_url":
+        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200215052740_10.5.62.90.wav",
+      "clip_path": "asr_live_data/20200215052740_10.5.62.90.wav",
+      "ground_truth": "Airtel app per registration Kaise karvayen",
+      "google_prediction": "Airtel app per registration Kaise karvayen"
+
     }
+    
   ],
   "prediction_model": [
     {
-      "model_name": "sample model",
-      "endpoint": "https://wwww.google.com",
+      "model_name": "hari8k_bench_hindi",
+      "endpoint": "https://stt.koiawaazsuno.in/hindi8bench",
       "owner": "Hari"
     }
   ],

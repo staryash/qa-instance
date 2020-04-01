@@ -27,7 +27,7 @@ Tables:
       - ColumnName: predicted_arr
         Name: predicted_arr
         ColumnType: label
-        DataType: varchar(100)
+        DataType: text
         IsNullable: true
   - TableName: prediction_model
     Columns:
@@ -78,6 +78,17 @@ Tables:
         ColumnType: truefalse
         DataType: int(1)
         DefaultValue: '0'
+  - TableName: error_cat
+    Columns:
+      - ColumnName: error_label
+        Name: error_label
+        DataType: varchar(100)
+        ColumnType: label
+      - ColumnName: description
+        Name: description
+        DataType: varchar(300)
+        ColumnType: label
+        IsNullable: true
 Relations:
   - Subject: clips
     Relation: has_many
