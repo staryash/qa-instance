@@ -1,0 +1,4 @@
+page to mark things {select or tags}
+page to show all tags related information and add new tags
+page to preview all already marked clip. {select on src or tags}
+page for stats {stats}

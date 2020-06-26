@@ -1,108 +1,99 @@
 Tables:
   - TableName: clips
     Columns:
-      - ColumnName: ground_truth
-        ColumnType: label
-        DataType: varchar(500)
-        Name: ground_truth
       - ColumnName: clip_path
-        ColumnType: label
-        DataType: varchar(250)
         Name: clip_path
+        ColumnType: label
+        DataType: varchar(350)
         IsUnique: true
       - ColumnName: clip_src
+        Name: clip_src
         ColumnType: label
         DataType: varchar(250)
-        Name: clip_src
-        DefaultValue: "'app'"
+        IsNullable: true
       - ColumnName: clip_url
         Name: clip_url
-        ColumnType: url
+        ColumnType: label
         DataType: varchar(250)
-      - ColumnName: google_prediction
-        Name: google_prediction
-        ColumnType: label
-        DataType: varchar(500)
-        IsNullable: true
-      - ColumnName: last_fetched
-        Name: last_fetched
-        ColumnType: datetime
-        DataType: timestamp
-        DefaultValue: "'2019-01-01 01:01:01'"
-      - ColumnName: predicted_arr
-        Name: predicted_arr
-        ColumnType: label
-        DataType: text
-        IsNullable: true
-  - TableName: prediction_model
-    Columns:
-      - ColumnName: model_name
-        Name: model_name
-        DataType: varchar(100)
-        ColumnType: label
         IsUnique: true
-      - ColumnName: endpoint
-        Name: endpoint
-        ColumnType: url
-        DataType: varchar(250)
-      - ColumnName: owner
-        Name: owner
-        DataType: varchar(100)
-        ColumnType: label
-        IsNullable: true
-  - TableName: prediction
-    Columns:
-      - ColumnName: prediction_model
-        Name: prediction_model
-        DataType: varchar(100)
-        ColumnType: label
-      - ColumnName: prediction_text
-        Name: prediction_text
-        ColumnType: label
-        DataType: varchar(500)
-        IsNullable: true
-      - ColumnName: ground_truth
-        ColumnType: label
-        DataType: varchar(500)
-        Name: ground_truth
-      - ColumnName: error_label
-        ColumnType: label
-        DataType: varchar(200)
-        Name: error_label
-      - ColumnName: marked_by
-        ColumnType: label
-        DataType: varchar(200)
-        Name: marked_by
-        IsNullable: true
       - ColumnName: last_fetched
         Name: last_fetched
         ColumnType: datetime
         DataType: timestamp
         DefaultValue: "'2019-01-01 01:01:01'"
-      - ColumnName: is_marked
-        Name: is_marked
+      - ColumnName: predicted_text
+        Name: predicted_text
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
+      - ColumnName: corrected_text
+        Name: corrected_text
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
+      - ColumnName: predicted_intent
+        Name: predicted_intent
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+      - ColumnName: corrected_intent
+        Name: corrected_intent
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+      - ColumnName: is_corrected
+        Name: is_corrected
         ColumnType: truefalse
         DataType: int(1)
         DefaultValue: '0'
-  - TableName: error_cat
+      - ColumnName: corrected_at
+        Name: corrected_at
+        ColumnType: datetime
+        DataType: timestamp
+        DefaultValue: "'2019-01-01 01:01:01'"
+  - TableName: intents
     Columns:
-      - ColumnName: error_label
-        Name: error_label
-        DataType: varchar(100)
+      - ColumnName: intent_name
+        Name: intent_name
         ColumnType: label
+        DataType: varchar(250)
         IsUnique: true
-      - ColumnName: description
-        Name: description
-        DataType: varchar(300)
+      - ColumnName: intent_description
+        Name: intent_description
         ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+  - TableName: sources
+    Columns:
+      - ColumnName: src_name
+        Name: src_name
+        ColumnType: label
+        DataType: varchar(250)
+        IsUnique: true
+      - ColumnName: src_display_name
+        Name: src_display_name
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+  - TableName: error_tags
+    Columns:
+      - ColumnName: tag_name
+        Name: tag_name
+        ColumnType: label
+        DataType: varchar(250)
+        IsUnique: true
+      - ColumnName: tag_description
+        Name: tag_description
+        ColumnType: label
+        DataType: varchar(250)
         IsNullable: true
 Relations:
   - Subject: clips
     Relation: has_many
-    Object: prediction
-  - Subject: prediction
+    Object: error_tags  #really needed
+  - Subject: clips
     Relation: has_one
-    Object: prediction_model
+    Object: sources  #really needed?
 Imports:
   - FilePath: /opt/daptin/initial_data.json
     Entity: site

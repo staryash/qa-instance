@@ -6,29 +6,33 @@
       "default_permission": 606083
     },
     {
-      "table_name": "prediction_model",
+      "table_name": "intents",
       "permission": 606115,
       "default_permission": 606083
     },
     {
-      "table_name": "prediction",
+      "table_name": "sources",
       "permission": 606115,
       "default_permission": 606083
     },
     {
-      "table_name": "error_cat",
+      "table_name": "error_tags",
       "permission": 606115,
       "default_permission": 606083
     }
   ],
-  "error_cat": [
+  "error_tags": [
     {
-      "error_label": "word mistake",
-      "description": "some kind of word mistake"
+      "error_label": "NumberDetection",
+      "description": "numbers not getting detected"
     },
     {
-      "error_label": "No mistake",
-      "description": "predicted text matches ground truth"
+      "error_label": "similarSoundingWords",
+      "description": "words that are different but sound same"
+    },
+    {
+      "error_label": "wrongSpelling",
+      "description": "words with wrong spelling"
     }
   ],
   "clips": [
@@ -36,69 +40,43 @@
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200305075356_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200305075356_10.5.62.90.wav",
-      "ground_truth": "balance mein se recharge kaise karen",
-      "google_prediction": "balance mein se recharge kaise karen",
-      "model_prediction": "balance kaise karein"
+      "predicted_text": "balance mein se recharge kaise karen",
+      "clip_src": "avaya"
     },
     {
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205140244_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200205140244_10.5.62.90.wav",
-      "ground_truth": "Mujhe Mera data balance batao",
-      "google_prediction": "Mujhe Mera data balance batao",
-      "model_prediction": "mera balance batao"
+      "predicted_text": "Mujhe Mera data balance batao",
+      "clip_src": "avaya"
     },
     {
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200206060540_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200206060540_10.5.62.90.wav",
-      "ground_truth": "Mujhe network mein problem a rahi hai",
-      "google_prediction": "Mujhe network mein problem a rahi hai"
-
+      "clip_src": "avaya"
     },
     {
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205111120_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200205111120_10.5.62.90.wav",
-      "ground_truth": "roaming packs Patna",
-      "google_prediction": "roaming packs Patna"
-
+      "predicted_text": "roaming packs Patna",
+      "clip_src": "avaya"
     },
     {
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200214103854_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200214103854_10.5.62.90.wav",
-      "ground_truth": "which is the highest pool in India",
-      "google_prediction": "which is the highest pool in India"
-
+      "predicted_text": "which is the highest pool in India",
+      "clip_src": "avaya"
     },
     {
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200215052740_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200215052740_10.5.62.90.wav",
-      "ground_truth": "Airtel app per registration Kaise karvayen",
-      "google_prediction": "Airtel app per registration Kaise karvayen"
-
+      "predicted_text": "Airtel app per registration Kaise karvayen",
+      "clip_src": "avaya"
     }
-    
-  ],
-  "prediction_model": [
-    {
-      "model_name": "hari8k_bench_hindi",
-      "endpoint": "https://stt.koiawaazsuno.in/hindi8bench",
-      "owner": "Hari"
-    },
-    {
-      "model_name": "hindi_devn_prod",
-      "endpoint": "https://stt.koiawaazsuno.in/hindic",
-      "owner": "Hari"
-    },
-    {
-      "model_name": "latin_conv_36",
-      "endpoint": "https://stt.koiawaazsuno.in/transcribe",
-      "owner": "Hari"
-    }
-  ],
-  "prediction": []
+  ]
   
 }

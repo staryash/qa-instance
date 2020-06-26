@@ -1,0 +1,19 @@
+- TableName: clips
+  - ColumnName: clip_path #unique
+  - ColumnName: clip_src  #default nullable
+  - ColumnName: clip_url  #unique
+  - ColumnName: last_fetched #time default
+  - ColumnName: predicted_text #nullable
+  - ColumnName: corrected_text #nullable
+  - ColumnName: predicted_intent #nullable
+  - ColumnName: corrected_intent #nullable
+  - ColumnName: is_corrected #boolean default
+- TableName: intents
+  - ColumnName: intent_name #unique
+  - ColumnName: intent_description #nullable
+- TableName: clip_src
+  - ColumnName: src_name #unique
+  - ColumnName: src_display_name #nullable
+- TableName: error_tags
+  - ColumnName: tag_name #unique
+  - ColumnName: tag_description #nullable
