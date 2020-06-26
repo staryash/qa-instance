@@ -10,6 +10,11 @@ Tables:
         DataType: varchar(250)
         Name: clip_path
         IsUnique: true
+      - ColumnName: clip_src
+        ColumnType: label
+        DataType: varchar(250)
+        Name: clip_src
+        DefaultValue: "'app'"
       - ColumnName: clip_url
         Name: clip_url
         ColumnType: url
@@ -35,6 +40,7 @@ Tables:
         Name: model_name
         DataType: varchar(100)
         ColumnType: label
+        IsUnique: true
       - ColumnName: endpoint
         Name: endpoint
         ColumnType: url
@@ -84,6 +90,7 @@ Tables:
         Name: error_label
         DataType: varchar(100)
         ColumnType: label
+        IsUnique: true
       - ColumnName: description
         Name: description
         DataType: varchar(300)

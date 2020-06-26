@@ -87,6 +87,16 @@
       "model_name": "hari8k_bench_hindi",
       "endpoint": "https://stt.koiawaazsuno.in/hindi8bench",
       "owner": "Hari"
+    },
+    {
+      "model_name": "hindi_devn_prod",
+      "endpoint": "https://stt.koiawaazsuno.in/hindic",
+      "owner": "Hari"
+    },
+    {
+      "model_name": "latin_conv_36",
+      "endpoint": "https://stt.koiawaazsuno.in/transcribe",
+      "owner": "Hari"
     }
   ],
   "prediction": []
