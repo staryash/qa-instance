@@ -23,16 +23,32 @@
   ],
   "error_tags": [
     {
-      "error_label": "NumberDetection",
-      "description": "numbers not getting detected"
+      "tag_name": "NumberDetection",
+      "tag_description": "numbers not getting detected"
     },
     {
-      "error_label": "similarSoundingWords",
-      "description": "words that are different but sound same"
+      "tag_name": "similarSoundingWords",
+      "tag_description": "words that are different but sound same"
     },
     {
-      "error_label": "wrongSpelling",
-      "description": "words with wrong spelling"
+      "tag_name": "wrongSpelling",
+      "tag_description": "words with wrong spelling"
+    }
+  ],
+  "intents": [
+    {
+      "intent_name": "welcome_intent",
+      "intent_description": "default intent for each welcoming"
+    },
+    {
+      "intent_name": "dth_query",
+      "intent_description": "query asking for  dth"
+    }
+  ],
+  "sources": [
+    {
+      "source_name": "avaya",
+      "source_display_name": "Avaya Calls"
     }
   ],
   "clips": [
