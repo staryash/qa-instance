@@ -51,6 +51,22 @@ Tables:
         ColumnType: datetime
         DataType: timestamp
         DefaultValue: "'2019-01-01 01:01:01'"
+      - ColumnName: tags_arr
+        Name: tags_arr
+        ColumnType: label
+        DataType: varchar(1000)
+        IsNullable: true
+        # DefaultValue: "'''"
+      - ColumnName: language
+        Name: language
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+      - ColumnName: meta_info
+        Name: meta_info
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
   - TableName: intents
     Columns:
       - ColumnName: intent_name
