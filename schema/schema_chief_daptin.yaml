@@ -6,6 +6,15 @@ Tables:
         ColumnType: label
         DataType: varchar(350)
         IsUnique: true
+      - Name: audio                # File column stores the blog to the cloud store
+        DataType: varchar(5000)
+        IsNullable: true
+        ColumnType: image.mp3|wav|flac
+        IsForeignKey: true
+        ForeignKeyData:
+          DataSource: cloud_store
+          Namespace: local-store
+          KeyName: audio
       - ColumnName: clip_src
         Name: clip_src
         ColumnType: label
@@ -46,6 +55,11 @@ Tables:
         ColumnType: truefalse
         DataType: int(1)
         DefaultValue: '0'
+      - ColumnName: corrected_by
+        Name: corrected_by
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
       - ColumnName: corrected_at
         Name: corrected_at
         ColumnType: datetime

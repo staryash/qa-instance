@@ -21,17 +21,29 @@
       "default_permission": 606083
     }
   ],
+  "cloud_store": [{
+		"name": "local-store",
+		"store_type": "local",
+		"store_provider": "local",
+		"root_path": "/opt/daptin/gallery",
+		"store_parameters": "{}",
+		"reference_id": "ca122915-4dbb-42cf-aa19-c89a14e6fa9a"
+	}],
   "error_tags": [
     {
-      "tag_name": "NumberDetection",
-      "tag_description": "numbers not getting detected"
+      "tag_name": "missed ending",
+      "tag_description": "ending not getting detected"
     },
     {
-      "tag_name": "similarSoundingWords",
+      "tag_name": "similar sounding word",
       "tag_description": "words that are different but sound same"
     },
     {
-      "tag_name": "wrongSpelling",
+      "tag_name": "wrong spelling",
+      "tag_description": "words with wrong spelling"
+    },
+    {
+      "tag_name": "no mistake",
       "tag_description": "words with wrong spelling"
     }
   ],
@@ -83,7 +95,7 @@
       "clip_url":
         "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200206060540_10.5.62.90.wav",
       "clip_path": "asr_live_data/20200206060540_10.5.62.90.wav",
-      "predicted_text": "is something about telemedia",
+      "predicted_text": "is something about broadband",
       "clip_src": "avaya",
       "predicted_intent": "telemedia",
       "language": "english"
@@ -94,7 +106,7 @@
       "clip_path": "asr_live_data/20200205111120_10.5.62.90.wav",
       "predicted_text": "roaming packs Patna",
       "clip_src": "avaya",
-      "predicted_intent": "welcome_intent",
+      "predicted_intent": "fallback",
       "language": "english"
     },
     {

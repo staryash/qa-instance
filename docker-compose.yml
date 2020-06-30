@@ -4,6 +4,8 @@ services:
     build: .
     ports:
     - "9999:5000"
+    volumes:
+    - ./daptin:/opt/daptin/gallery
   production-postgres:
     image: postgres
     volumes:
