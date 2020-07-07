@@ -1,7 +1,7 @@
 - TableName: clips
   - ColumnName: clip_path #unique
   - ColumnName: clip_src  #default nullable
-  - ColumnName: clip_url  #unique
+  - ColumnName: audio  #text reference to file
   - ColumnName: last_fetched #time default
   - ColumnName: predicted_text #nullable
   - ColumnName: corrected_text #nullable

@@ -6,10 +6,10 @@ Tables:
         ColumnType: label
         DataType: varchar(350)
         IsUnique: true
-      - Name: audio                # File column stores the blog to the cloud store
-        DataType: varchar(5000)
+      - Name: audio
+        DataType: text
         IsNullable: true
-        ColumnType: image.mp3|wav|flac
+        ColumnType: file.mp3|wav|flac
         IsForeignKey: true
         ForeignKeyData:
           DataSource: cloud_store
@@ -20,11 +20,6 @@ Tables:
         ColumnType: label
         DataType: varchar(250)
         IsNullable: true
-      - ColumnName: clip_url
-        Name: clip_url
-        ColumnType: label
-        DataType: varchar(250)
-        IsUnique: true
       - ColumnName: last_fetched
         Name: last_fetched
         ColumnType: datetime
@@ -70,7 +65,6 @@ Tables:
         ColumnType: label
         DataType: varchar(1000)
         IsNullable: true
-        # DefaultValue: "'''"
       - ColumnName: language
         Name: language
         ColumnType: label
@@ -120,10 +114,10 @@ Tables:
 Relations:
   - Subject: clips
     Relation: has_many
-    Object: error_tags  #really needed
+    Object: error_tags
   - Subject: clips
     Relation: has_one
-    Object: sources  #really needed?
+    Object: sources
 Imports:
   - FilePath: /opt/daptin/initial_data.json
     Entity: site

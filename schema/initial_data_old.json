@@ -1,0 +1,110 @@
+{
+    "world": [
+      {
+        "table_name": "clips",
+        "permission": 606115,
+        "default_permission": 606083
+      },
+      {
+        "table_name": "intents",
+        "permission": 606115,
+        "default_permission": 606083
+      },
+      {
+        "table_name": "sources",
+        "permission": 606115,
+        "default_permission": 606083
+      },
+      {
+        "table_name": "error_tags",
+        "permission": 606115,
+        "default_permission": 606083
+      }
+    ],
+    "cloud_store": [{
+          "name": "local-store",
+          "store_type": "local",
+          "store_provider": "local",
+          "root_path": "/opt/daptin/gallery",
+          "store_parameters": "{}",
+          "reference_id": "ca122915-4dbb-42cf-aa19-c89a14e6fa9a"
+      }],
+    "error_tags": [
+      {
+        "tag_name": "missed ending",
+        "tag_description": "ending not getting detected"
+      },
+      {
+        "tag_name": "similar sounding word",
+        "tag_description": "words that are different but sound same"
+      },
+      {
+        "tag_name": "wrong spelling",
+        "tag_description": "words with wrong spelling"
+      },
+      {
+        "tag_name": "no mistake",
+        "tag_description": "when there is no mistake"
+      }
+    ],
+    "intents": [
+      {
+        "intent_name": "prepaid",
+        "intent_description": "query asking prepaid"
+      },
+      {
+        "intent_name": "postpaid",
+        "intent_description": "query asking about postpaid"
+      },
+      {
+        "intent_name": "dth",
+        "intent_description": "query asking about dth services"
+      },
+      {
+        "intent_name": "telemedia",
+        "intent_description": "query asking about telemedia or broadband"
+      },
+      {
+        "intent_name": "fallback",
+        "intent_description": "intent which doesnt fit in defined categories"
+      }
+    ],
+    "sources": [
+      {
+        "source_name": "avaya",
+        "source_display_name": "Avaya Calls"
+      }
+    ],
+    "clips": [
+      {
+        "clip_path": "asr_live_data/20200305075356_10.5.62.90.wav",
+        "predicted_text": "balance mein se recharge kaise karen",
+        "clip_src": "avaya",
+        "predicted_intent": "prepaid",
+        "meta_info": "{\"phone\": 8940535709}",
+        "language": "english"
+      },
+      {
+        "clip_path": "asr_live_data/20200205140244_10.5.62.90.wav",
+        "predicted_text": "Mujhe Mera data balance batao",
+        "clip_src": "avaya",
+        "predicted_intent": "prepaid",
+        "language": "english"
+      },
+      {
+        "clip_path": "asr_live_data/20200206060540_10.5.62.90.wav",
+        "predicted_text": "is something about broadband",
+        "clip_src": "avaya",
+        "predicted_intent": "telemedia",
+        "language": "english"
+      },
+      {
+        "clip_path": "asr_live_data/20200205111120_10.5.62.90.wav",
+        "predicted_text": "roaming packs Patna",
+        "clip_src": "avaya",
+        "predicted_intent": "fallback",
+        "language": "english"
+      }
+    ]
+    
+  }

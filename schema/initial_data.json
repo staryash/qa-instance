@@ -44,7 +44,11 @@
     },
     {
       "tag_name": "no mistake",
-      "tag_description": "words with wrong spelling"
+      "tag_description": "when there is no mistake"
+    },
+    {
+      "tag_name": "bad clip",
+      "tag_description": "clip cant be transcribed or empty"
     }
   ],
   "intents": [
@@ -58,11 +62,15 @@
     },
     {
       "intent_name": "dth",
-      "intent_description": "query asking about dth"
+      "intent_description": "query asking about dth services"
     },
     {
       "intent_name": "telemedia",
-      "intent_description": "query asking about telemedia"
+      "intent_description": "query asking about telemedia or broadband"
+    },
+    {
+      "intent_name": "fallback",
+      "intent_description": "intent which doesnt fit in defined categories"
     }
   ],
   "sources": [
@@ -71,62 +79,6 @@
       "source_display_name": "Avaya Calls"
     }
   ],
-  "clips": [
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200305075356_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200305075356_10.5.62.90.wav",
-      "predicted_text": "balance mein se recharge kaise karen",
-      "clip_src": "avaya",
-      "predicted_intent": "prepaid",
-      "meta_info": "{\"phone\": 8940535709}",
-      "language": "english"
-    },
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205140244_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200205140244_10.5.62.90.wav",
-      "predicted_text": "Mujhe Mera data balance batao",
-      "clip_src": "avaya",
-      "predicted_intent": "prepaid",
-      "language": "english"
-    },
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200206060540_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200206060540_10.5.62.90.wav",
-      "predicted_text": "is something about broadband",
-      "clip_src": "avaya",
-      "predicted_intent": "telemedia",
-      "language": "english"
-    },
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200205111120_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200205111120_10.5.62.90.wav",
-      "predicted_text": "roaming packs Patna",
-      "clip_src": "avaya",
-      "predicted_intent": "fallback",
-      "language": "english"
-    },
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200214103854_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200214103854_10.5.62.90.wav",
-      "predicted_text": "which is the highest pool in India",
-      "clip_src": "avaya",
-      "predicted_intent": "dth_query",
-      "language": "english"
-    },
-    {
-      "clip_url":
-        "https://sonotes-files.koiawaazsuno.in/asr_live_data/20200215052740_10.5.62.90.wav",
-      "clip_path": "asr_live_data/20200215052740_10.5.62.90.wav",
-      "predicted_text": "Airtel app per registration Kaise karvayen",
-      "clip_src": "avaya",
-      "predicted_intent": "dth_query",
-      "language": "english"
-    }
-  ]
+  "clips": []
   
 }
