@@ -111,10 +111,35 @@ Tables:
         ColumnType: label
         DataType: varchar(250)
         IsNullable: true
+  - TableName: clip_groups
+    Columns:
+      - ColumnName: group_name
+        Name: group_name
+        ColumnType: label
+        DataType: varchar(250)
+        IsUnique: true
+      - ColumnName: created_by
+        Name: created_by
+        ColumnType: label
+        DataType: varchar(250)
+        IsNullable: true
+      - ColumnName: meta_info
+        Name: meta_info
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
+      - ColumnName: date_range
+        Name: date_range
+        ColumnType: label
+        DataType: varchar(500)
+        IsNullable: true
 Relations:
   - Subject: clips
     Relation: has_many
     Object: error_tags
+  - Subject: clip_groups
+    Relation: has_many
+    Object: clips
   - Subject: clips
     Relation: has_one
     Object: sources

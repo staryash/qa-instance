@@ -2,23 +2,23 @@
   "world": [
     {
       "table_name": "clips",
-      "permission": 606115,
-      "default_permission": 606083
+      "permission": 2097063,
+      "default_permission": 2097063
     },
     {
       "table_name": "intents",
-      "permission": 606115,
-      "default_permission": 606083
+      "permission": 2097063,
+      "default_permission": 2097063
     },
     {
       "table_name": "sources",
-      "permission": 606115,
-      "default_permission": 606083
+      "permission": 2097063,
+      "default_permission": 2097063
     },
     {
       "table_name": "error_tags",
-      "permission": 606115,
-      "default_permission": 606083
+      "permission": 2097063,
+      "default_permission": 2097063
     }
   ],
   "cloud_store": [{
@@ -75,8 +75,12 @@
   ],
   "sources": [
     {
-      "source_name": "avaya",
-      "source_display_name": "Avaya Calls"
+      "src_name": "avaya",
+      "src_display_name": "Avaya Calls"
+    },
+    {
+      "src_name": "app",
+      "src_display_name": "My airtel app"
     }
   ],
   "clips": []

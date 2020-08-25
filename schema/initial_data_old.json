@@ -2,23 +2,23 @@
     "world": [
       {
         "table_name": "clips",
-        "permission": 606115,
-        "default_permission": 606083
+        "permission": 2097151,
+        "default_permission": 2097151
       },
       {
         "table_name": "intents",
-        "permission": 606115,
-        "default_permission": 606083
+        "permission": 2097151,
+        "default_permission": 2097151
       },
       {
         "table_name": "sources",
-        "permission": 606115,
-        "default_permission": 606083
+        "permission": 2097151,
+        "default_permission": 2097151
       },
       {
         "table_name": "error_tags",
-        "permission": 606115,
-        "default_permission": 606083
+        "permission": 2097151,
+        "default_permission": 2097151
       }
     ],
     "cloud_store": [{
