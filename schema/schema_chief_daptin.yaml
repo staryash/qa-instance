@@ -118,6 +118,11 @@ Tables:
         ColumnType: label
         DataType: varchar(250)
         IsUnique: true
+      - ColumnName: group_description
+        Name: group_description
+        ColumnType: label
+        DataType: varchar(350)
+        IsNullable: true
       - ColumnName: created_by
         Name: created_by
         ColumnType: label
