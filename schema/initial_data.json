@@ -19,6 +19,11 @@
       "table_name": "error_tags",
       "permission": 2097063,
       "default_permission": 2097063
+    },
+    {
+      "table_name": "clip_groups",
+      "permission": 2097063,
+      "default_permission": 2097063
     }
   ],
   "cloud_store": [{
