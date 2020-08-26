@@ -111,6 +111,17 @@ Tables:
         ColumnType: label
         DataType: varchar(250)
         IsNullable: true
+  - TableName: languages
+    Columns:
+      - ColumnName: name
+        Name: name
+        ColumnType: label
+        DataType: varchar(50)
+      - ColumnName: code
+        Name: code
+        ColumnType: label
+        DataType: varchar(5)
+        IsUnique: true
   - TableName: clip_groups
     Columns:
       - ColumnName: group_name
@@ -133,10 +144,15 @@ Tables:
         ColumnType: label
         DataType: varchar(500)
         IsNullable: true
-      - ColumnName: date_range
-        Name: date_range
-        ColumnType: label
-        DataType: varchar(500)
+      - ColumnName: start_date
+        Name: start_date
+        ColumnType: datetime
+        DataType: timestamp
+        IsNullable: true
+      - ColumnName: end_date
+        Name: end_date
+        ColumnType: datetime
+        DataType: timestamp
         IsNullable: true
 Relations:
   - Subject: clips
@@ -148,6 +164,9 @@ Relations:
   - Subject: clips
     Relation: has_one
     Object: sources
+  - Subject: clips
+    Relation: has_one
+    Object: languages
 Imports:
   - FilePath: /opt/daptin/initial_data.json
     Entity: site

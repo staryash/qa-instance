@@ -2,28 +2,28 @@
   "world": [
     {
       "table_name": "clips",
-      "permission": 2097063,
-      "default_permission": 2097063
+      "permission": 2097151,
+      "default_permission": 2097151
     },
     {
       "table_name": "intents",
-      "permission": 2097063,
-      "default_permission": 2097063
+      "permission": 2097151,
+      "default_permission": 2097151
     },
     {
       "table_name": "sources",
-      "permission": 2097063,
-      "default_permission": 2097063
+      "permission": 2097151,
+      "default_permission": 2097151
     },
     {
       "table_name": "error_tags",
-      "permission": 2097063,
-      "default_permission": 2097063
+      "permission": 2097151,
+      "default_permission": 2097151
     },
     {
       "table_name": "clip_groups",
-      "permission": 2097063,
-      "default_permission": 2097063
+      "permission": 2097151,
+      "default_permission": 2097151
     }
   ],
   "cloud_store": [{
