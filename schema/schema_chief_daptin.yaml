@@ -75,6 +75,11 @@ Tables:
         ColumnType: label
         DataType: varchar(500)
         IsNullable: true
+      - ColumnName: group_state
+        Name: group_state
+        ColumnType: label
+        DataType: varchar(100)
+        DefaultValue: "'unassigned'"
   - TableName: intents
     Columns:
       - ColumnName: intent_name
